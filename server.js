@@ -8,12 +8,16 @@ import categoriaRutas from "./routes/categoriaRutas.js";
 import productoRutas from "./routes/productoRutas.js";
 import cors from "cors";
 import path from "path";
+import { fileURLToPath } from 'url';
 //Configuramos dotenv
 dotenv.config();
 
 //database config
 connectDB();
 
+//solucion modulo
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 // objeto rest
 const app = express();
 
